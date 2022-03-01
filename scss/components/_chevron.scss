@@ -1,0 +1,74 @@
+@import "../utils/variables";
+$base: 1rem;
+
+.chevron {
+	display: block;
+    position: absolute;
+    bottom: 5rem;
+	left: 50%;
+	transform:translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $base*10;
+	height: $base*10;
+    cursor: pointer;
+
+}
+
+.chevron__part {
+	display: block;
+	position: absolute;
+	width: $base * 3.5;
+	height: $base * 0.8;
+	opacity: 0;
+	transform: scale(0.3);
+	animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron__part:first-child {
+	animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron__part:nth-child(2) {
+	animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron__part:before,
+.chevron__part:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	background: $color-grey-700;
+}
+
+.chevron__part:before {
+	left: 0;
+	transform: skewY(30deg);
+}
+
+.chevron__part:after {
+	right: 0;
+	width: 50%;
+	transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+	25% {
+		opacity: 1;
+	}
+	33.3% {
+		opacity: 1;
+		transform: translateY($base * 3.8);
+	}
+	66.6% {
+		opacity: 1;
+		transform: translateY($base * 5.2);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY($base * 8) scale(0.5);
+	}
+}

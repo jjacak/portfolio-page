@@ -1,0 +1,124 @@
+.contact {
+	background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)),
+		url('../../img/form-bg-big.jpg');
+	background-position: center;
+	background-size: cover;
+    background-attachment: fixed;
+	color: $color-grey-100;
+}
+
+.contact__flex-container {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	padding: 5rem 2rem;
+}
+
+.contact__text {
+	.contact__title {
+		font-size: 3rem;
+		color: #fff;
+		margin-bottom: 2rem;
+	}
+    .contact_info{
+        margin-top: 3rem;
+        font-size: 1.6rem;
+      
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.contact__form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr auto 1fr;
+	grid-template-areas:
+		'name name'
+        'email email'
+		'msg msg'
+		'btn btn';
+	gap: 2rem;
+	background-color: transparent;
+
+	.form-control {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		label {
+			font-size: 1.6rem;
+		}
+		input,
+		textarea {
+			background-color: transparent;
+			border: 2px solid $color-grey-100;
+			color: $color-grey-100;
+			padding: 1rem;
+			border-radius: 5px;
+			font-size: 1.6rem;
+			outline: none;
+			
+		}
+		input.error, textarea.error {
+			border: 2px solid $color-error;
+		}
+		input:-webkit-autofill,
+		input:-webkit-autofill:focus {
+			transition: background-color 600000s 0s, color 600000s 0s;
+		}
+		input:focus,
+		textarea:focus {
+			border: 2px solid $color-accent;
+			box-shadow: 0 0 3px $color-accent;
+		}
+        textarea{
+            resize: none;
+            overflow: auto;
+        }
+	}
+	.form-control:first-child {
+		grid-area: name;
+	}
+	.form-control:nth-child(2) {
+		grid-area: email;
+	}
+	.form-control:nth-child(3) {
+		grid-area: msg;
+	}
+	.actions {
+		grid-area: btn;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+	}
+	.error-msg{
+		font-size: 1.2rem;
+		color:$color-error;
+		visibility: hidden;
+
+	}
+}
+
+@media (min-width: 993px) {
+	.contact__flex-container {
+		flex-direction: row;
+	}
+	.contact__text {
+		flex-basis: 40%;
+	}
+	.contact__form-area {
+		flex-basis: 60%;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px), (min-width: 1200px){
+	.contact__form {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr auto 1fr;
+		grid-template-areas:
+			'name email'
+			'msg msg'
+			'btn btn';
+	}
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Joanna Jacak</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/488c7bbaa5.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/main.css" />
+		<!-- module script doesnt need defer attr -->
+		<script src="./script/app.js" type="module"></script>
+		<script src="./script/bundle.js" defer></script>
+	</head>
+	<body data-spy="scroll" data-target=".main-nav" data-offset="100">
+		<img
+			class="backdrop-img"
+			src="./img/header-img-big.jpg"
+			alt="Desk with laptop, coffee mug and pens on it."
+		/>
+		<div class="wrapper">
+			<header id="home">
+				<nav class="main-nav">
+					<button class="hamburger-icon">
+						<div class="hamburger-icon__inner">
+							<span class="hamburger-icon__span"></span
+							><span class="hamburger-icon__span"></span
+							><span class="hamburger-icon__span"></span>
+						</div>
+					</button>
+					<div class="main-nav__list">
+						<a href="#home" class="main-nav__item nav-link">home</a>
+						<a href="#about" class="main-nav__item nav-link">about me</a>
+						<a href="#skills" class="main-nav__item nav-link">skills</a>
+						<a href="#projects" class="main-nav__item nav-link">projects</a>
+						<a href="#contact" class="main-nav__item nav-link">contact</a>
+					</div>
+				</nav>
+				<div class="header__hero">
+					<h1>Hi! I'm <span class="heading-name">Joanna</span></h1>
+					<p class="heading-description">I am a frontend developer.</p>
+					<a href="#about">
+						<span class="chevron">
+							<span class="chevron__part"></span>
+							<span class="chevron__part"></span>
+							<span class="chevron__part"></span>
+						</span>
+					</a>
+				</div>
+			</header>
+			<main>
+				<section id="about">
+					<div class="text-container">
+						<h2 class="section-title">About me</h2>
+						<div class="about__flex-container">
+							<img src="./img/portrait.jpg" alt="A picture of me" />
+							<div class="about__text">
+								<p>
+									My name is Joanna Jacak. I am a frontend developer based in
+									Szczecin. I formerly worked as a pharmacists but I developed
+									love for programming and decided that I wanted to pursue a
+									career in this field.
+								</p>
+								<p>
+									I don't have any commercial experience as of today, but I am a
+									<strong>hard worker</strong> and a
+									<strong>fast learner</strong>. I am very
+									<strong>detail oriented</strong> (as you would expect from a
+									pharmacist). I also have good
+									<strong>communication skills</strong> and I definitely am a
+									<strong>team player</strong>.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="skills">
+					<h2 class="section-title">Skills</h2>
+
+					<div class="skills__background">
+						<div class="skills__flex-container">
+							<div class="skills__item delay1">
+								<h3>html 5</h3>
+								<i class="fab fa-html5"></i>
+							</div>
+							<div class="skills__item delay2">
+								<h3>css 3</h3>
+								<i class="fab fa-css3-alt"></i>
+							</div>
+							<div class="skills__item delay3">
+								<h3>javascript</h3>
+								<i class="fab fa-js-square"></i>
+							</div>
+							<div class="skills__item delay4">
+								<h3>sass</h3>
+								<i class="fab fa-sass"></i>
+							</div>
+							<div class="skills__item delay5">
+								<h3>react js</h3>
+								<i class="fab fa-react"></i>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="projects">
+					<h2 class="section-title">My projects</h2>
+					<div class="projects-flex-container">
+						<div class="project-card project-interactions">
+							<div class="project-card__content">
+								<h3 class="project-card__title">Drug Interactions Checker</h3>
+								<p class="project-card__body">
+									Check interactions between drugs. App made with React.js and
+									css.modules.
+								</p>
+								<div class="project-card__actions">
+									<a
+										href="https://interaction-checker.web.app/"
+										target="_blank"
+										class="button button--live"
+										>Live</a
+									>
+									<a
+										href="https://github.com/jjacak/interaction-checker"
+										target="_blank"
+										class="button button--repo"
+										>Repo</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="project-card tic-tac-toe">
+							<div class="project-card__content">
+								<h3 class="project-card__title">Tic Tac Toe Game</h3>
+								<p class="project-card__body">
+									Play a Tic Tac Toe game. Made with vanilla javascript.
+								</p>
+								<div class="project-card__actions">
+									<a href="https://tic-tac-toe-c79cc.web.app/" target="_blank" class="button button--live"
+										>Live</a
+									>
+									<a href="https://github.com/jjacak/tic-tac-toe" target="_blank" class="button button--repo"
+										>Repo</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="contact" class="contact">
+					<div class="text-container">
+						<div class="contact__flex-container">
+							<div class="contact__text">
+								<h2 class="contact__title">CONTACT ME</h2>
+								<p>
+									If you would like to get in touch with me, please feel free to
+									send me a message via contact form or e-mail me at:
+								</p>
+								<div class="contact_info">
+									<a href="mailto:adres joanna.jacak@protonmail.com"
+										>joanna.jacak@protonmail.com</a
+									>
+								</div>
+							</div>
+							<div class="contact__form-area">
+								<form action="" class="contact__form">
+									<div class="form-control">
+										<label for="name">NAME</label>
+										<input type="text" name="name" id="name" required />
+										<p class="error-msg error-for-name"></p>
+									</div>
+									<div class="form-control">
+										<label for="e-mail">EMAIL</label>
+										<input
+											type="email"
+											name="e-mail"
+											id="e-mail"
+											required
+											pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+										/>
+										<p class="error-msg error-for-e-mail"></p>
+									</div>
+									<div class="form-control">
+										<label for="message">MESSAGE</label>
+										<textarea
+											name="message"
+											id="message"
+											cols="100"
+											rows="8"
+											required
+										></textarea>
+										<p class="error-msg error-for-message"></p>
+									</div>
+									<div class="actions">
+										<button type="submit" class="contact__button form-button">
+											SEND
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<!-- ------------------ bootstrap ---------------->
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		<!-------------------- bootstrap ---------------->
+	</body>
+</html>

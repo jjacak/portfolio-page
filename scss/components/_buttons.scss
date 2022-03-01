@@ -1,0 +1,120 @@
+@import '../utils/variables';
+
+//hamburger menu button ---->
+
+.hamburger-icon {
+    display: block;
+    width: 7rem;
+    height:5.8rem;
+    border: none;
+    background: none;
+    padding: 1.5rem;
+    z-index: 10;
+    
+
+    &__inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            display: block;
+            height: .3rem;
+            width: 100%;
+            background: $color-grey-900;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: 0.25s ease-in-out;
+        }
+        span:nth-child(1) {
+            top: 0;
+            transform-origin: left center;
+        }
+        span:nth-child(2) {
+            top: 1rem;
+            transform-origin: left center;
+        }
+        span:nth-child(3) {
+            top: 2rem;
+            transform-origin: left center;
+        }
+    }
+    
+}
+
+
+.hamburger-icon.is-active {
+
+    .hamburger-icon__inner {
+        span:nth-child(1) {
+			transform: rotate(45deg);
+			top: -3px;
+			left: 8px;
+		}
+		span:nth-child(2) {
+			width: 0%;
+			opacity: 0;
+		}
+		span:nth-child(3) {
+			top: 25px;
+			left: 8px;
+			transform: rotate(-45deg);
+		}
+    }
+ 
+}
+//contact form buttons ---->
+.form-button {
+    color: $color-grey-100;
+    border: 3px solid $color-grey-100;
+    border-radius: 5px;
+    background: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    outline: none;
+    transition: color .3s ease, border .3s ease, box-shadow .3s ease;
+    &:hover, &:focus {
+        color: $color-accent;
+        border: 3px solid $color-accent;
+        box-shadow: 0 0 3px $color-accent;
+    }
+}
+
+
+
+
+//other buttons--->
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-grey-900;
+    font-size: 1.4rem;
+    font-family: inherit;
+    background-color: $color-accent;
+    padding: 0.5rem 1.2rem;
+    border-radius: .3rem;
+    transition: background-color .3s;
+
+    &:hover, &:focus {
+        background-color: $color-grey-100;
+
+    }
+}
+
+
+
+
+@media (min-width:992px){
+    .hamburger-icon {
+        display: none;
+    }
+}
+

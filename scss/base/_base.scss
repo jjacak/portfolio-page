@@ -1,0 +1,131 @@
+@import '../utils/variables';
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+button > * {
+	pointer-events: none;
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+    scroll-padding-top:70px;
+}
+
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	color: $color-grey-900;
+	background-color: $color-bg;
+	padding: 2rem 0;
+    
+}
+section {
+	margin-top: 4rem;
+    padding: 0 2rem;
+}
+h1 {
+    position: relative;
+	font-size: 3.8rem;
+	margin-bottom: 3rem;
+    &::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -1.5rem;
+		width: 12rem;
+		height: 0.4rem;
+		background-color: $color-accent;
+	}
+	
+}
+
+.section-title {
+	position: relative;
+	font-size: 3rem;
+    color: #000;
+	text-align: center;
+    margin-bottom: 6rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -0.5rem;
+		width: 7rem;
+		height: 0.3rem;
+		background-color: $color-accent;
+	}
+}
+
+h3 {
+	font-size: 2.2rem;
+	margin-bottom: 1rem;
+}
+
+p {
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+p+p {
+	margin-top: 2rem;
+}
+
+.text-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+	width: 1.2rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: $color-grey-100;
+	box-shadow: inset 0 0 .3rem $color-grey-500;
+  }
+ 
+  ::-webkit-scrollbar-thumb {
+	background: $color-grey-700;
+
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: $color-grey-500;
+  }
+
+ 
+
+@media(min-width:576px){
+   p{
+	   font-size: 2rem;
+   }
+}
+
+@media(min-width:768px){
+    section {
+        padding: 0 3rem;
+    }
+}
+
+// @media (prefers-reduced-motion: reduce) {
+// 	*,
+// 	*::before,
+// 	*::after {
+// 		animation-duration: 0.01ms !important;
+// 		animation-iteration-count: 1 !important;
+// 		transition-duration: 0.01ms !important;
+// 		scroll-behavior: auto !important;
+//         transition-delay: 0ms !important;
+// 	}
+// }
