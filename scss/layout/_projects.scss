@@ -45,7 +45,7 @@
 
 	.project-card__title {
 		position: relative;
-		width: max-content;
+		// width: max-content;
 		max-width: 100%;
 
 		&::after {
@@ -87,7 +87,7 @@
 		}
 	}
 	.project-card__content {
-		transform: translateY(60%);
+		transform: translateY(65%);
 		transition: transform 0.5s ease;
 
 		& > *:not(.project-card__title) {
@@ -101,9 +101,7 @@
 		
 	}
 
-	.tic-tac-toe .project-card__content{
-		transform: translateY(80%);
-	}
+
 
 	// solving an issue with transform for tab navigation
 	.project-card:focus-within .project-card__content {

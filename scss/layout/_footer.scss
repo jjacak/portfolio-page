@@ -1,0 +1,29 @@
+.footer {
+	background-color: #000;
+	color: $color-grey-300;
+	padding: 1.5rem 2rem;
+}
+
+.footer__content {
+	display: flex;
+	justify-content: flex-start;
+    align-items: center;
+	gap: 2rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid $color-grey-300;
+
+	.copyright {
+		font-size: 1.4rem;
+		
+	}
+
+	.media__link {
+		color: inherit;
+        font-size: 2rem;
+        padding: 0.5rem;
+
+        i{
+            height: 100%;
+        }
+	}
+}
