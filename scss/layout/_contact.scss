@@ -13,8 +13,12 @@
 	gap: 3rem;
 	padding: 5rem 2rem;
 }
-
+.contact__form-area{
+	min-width: 0;
+	flex-basis: 60%;
+}
 .contact__text {
+	flex-basis: 40%;
 	.contact__title {
 		font-size: 3rem;
 		color: #fff;
@@ -31,14 +35,8 @@
 }
 
 .contact__form {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr auto 1fr;
-	grid-template-areas:
-		'name name'
-        'email email'
-		'msg msg'
-		'btn btn';
+	display: flex;
+	flex-direction: column;
 	gap: 2rem;
 	background-color: transparent;
 
@@ -78,17 +76,8 @@
             overflow: auto;
         }
 	}
-	.form-control:first-child {
-		grid-area: name;
-	}
-	.form-control:nth-child(2) {
-		grid-area: email;
-	}
-	.form-control:nth-child(3) {
-		grid-area: msg;
-	}
+
 	.actions {
-		grid-area: btn;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -105,20 +94,17 @@
 	.contact__flex-container {
 		flex-direction: row;
 	}
-	.contact__text {
-		flex-basis: 40%;
-	}
-	.contact__form-area {
-		flex-basis: 60%;
-	}
 }
 @media (min-width: 768px) and (max-width: 992px), (min-width: 1200px){
 	.contact__form {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr auto 1fr;
-		grid-template-areas:
-			'name email'
-			'msg msg'
-			'btn btn';
+		.form-control-halves {
+			display: flex;
+			justify-content: space-between;
+	
+			
+			.form-control {
+				width:calc(50% - 2rem);
+			}
+		}
 	}
 }
