@@ -26,9 +26,13 @@
 	background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
 		url('../../img/pills.jpg');
 }
-.tic-tac-toe {
+.message-app {
 	background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
-		url('../../img/tictactoe.jpg');
+		url('../../img/message-bg.png');
+}
+.auth-app {
+	background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+		url('../../img/auth-bg.jpg');
 }
 
 .project-card__content {
@@ -98,10 +102,7 @@
 		.project-card__title::after {
 			transform: scaleX(0);
 		}
-		
 	}
-
-
 
 	// solving an issue with transform for tab navigation
 	.project-card:focus-within .project-card__content {

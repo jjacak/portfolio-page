@@ -729,9 +729,14 @@ header .heading-description {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../img/pills.jpg");
 }
 
-.tic-tac-toe {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../img/tictactoe.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../img/tictactoe.jpg");
+.message-app {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../img/message-bg.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../img/message-bg.png");
+}
+
+.auth-app {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../img/auth-bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../img/auth-bg.jpg");
 }
 
 .project-card__content {
@@ -746,8 +751,8 @@ header .heading-description {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.5rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(20%, rgba(0, 0, 0, 0.3)), to(black));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 20%, black);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(20%, rgba(0, 0, 0, 0.3)), to(rgb(0, 0, 0)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 20%, rgb(0, 0, 0));
   height: 100%;
 }
 .project-card__content .project-card__title {
@@ -897,7 +902,7 @@ header .heading-description {
   outline: none;
 }
 .contact__form .form-control input.error, .contact__form .form-control textarea.error {
-  border: 2px solid #aa3232;
+  border: 2px solid rgb(170, 50, 50);
 }
 .contact__form .form-control input:-webkit-autofill,
 .contact__form .form-control input:-webkit-autofill:focus {
@@ -927,7 +932,7 @@ header .heading-description {
 }
 .contact__form .error-msg {
   font-size: 1.2rem;
-  color: #aa3232;
+  color: rgb(170, 50, 50);
   visibility: hidden;
 }
 
