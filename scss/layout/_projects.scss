@@ -22,6 +22,10 @@
 		transform: scale(1.05);
 	}
 }
+.project-collection {
+	background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+		url('../../img/collection.jpg');
+}
 .project-interactions {
 	background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
 		url('../../img/pills.jpg');
